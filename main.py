@@ -12,6 +12,8 @@ def main():
     print(p)
 
     wonderful_life = Movie("It's a wonderful life", 1946, Person('Copra', 'Frank'))
+    wonderful_life.add_cast_member(Person('Reed', 'Donna'))
+    wonderful_life.add_cast_member(Person('Stewart', 'James'))
     print(wonderful_life)
 
 if __name__ == '__main__':

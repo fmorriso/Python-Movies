@@ -12,5 +12,8 @@ class Movie:
     cast: Optional[list[Person]] = None
 
     def add_cast_member(self, member: Person) -> None:
-        if member not in self.cast:
-            self.cast.append(member)
+        if self.cast is None:
+            self.cast = [member]
+        else:
+            if member not in self.cast:
+                self.cast.append(member)
