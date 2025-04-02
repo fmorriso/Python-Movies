@@ -18,6 +18,8 @@ def main():
     print(wonderful_life)
 
     royalish = Comedy('Royal-ish', 2021, Person('Bobb', 'Roger'), 'Romantic Comedy')
+    royalish.add_cast_member(Person('Sakura', 'Nichole'))
+    royalish.add_cast_member(Person('Dempsey', 'Brendan'))
     print(royalish)
 
 
