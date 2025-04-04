@@ -8,10 +8,13 @@ class Movie:
     title: str
     year: int
     director: Person
+
+
     # cast is optional, so we initialize it in the special __post_init__ method
 
     def __post_init__(self):
         self.cast: list[Person] = []
+
 
     def __repr__(self) -> str:
         result = asdict(self)
@@ -26,6 +29,12 @@ class Movie:
         movie += ')'
         return movie
 
+
     def add_cast_member(self, member: Person) -> None:
         if member not in self.cast:
             self.cast.append(member)
+
+
+    def remove_cast_member(self, member: Person) -> None:
+        if member in self.cast:
+            self.cast.remove(member)
